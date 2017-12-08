@@ -35,11 +35,11 @@
 export default {
   data () {
     return {
-      meetups: [
-        {imageUrl: 'https://lonelyplanetimages.imgix.net/mastheads/GettyImages-538096543_medium.jpg?sharp=10&vib=20&w=1200', id: '1', title: 'New York'},
-        {imageUrl: 'http://api.theweek.com/sites/default/files/styles/tw_image_9_4/public/iStock-519162622.jpg?itok=nfRcImuY&resize=1260x560', id: '2', title: 'New York 2'},
-        {imageUrl: 'http://www.wibbitz.com/wp-content/uploads/2015/06/new_york_city.jpg', id: '3', title: 'New York 3'}
-      ]
+    }
+  },
+  computed: {
+    meetups () {
+      return this.$store.getters.featuredMeetups
     }
   },
   methods: {

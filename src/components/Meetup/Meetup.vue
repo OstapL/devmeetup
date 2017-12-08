@@ -4,10 +4,10 @@
       <v-flex xs12>
         <v-card>
           <v-card-title>
-            <h2 class="primary--text">My Meetup</h2>
+            <h2 class="primary--text">{{ meetup.title}}</h2>
           </v-card-title>
           <v-card-media
-            src="http://www.wibbitz.com/wp-content/uploads/2015/06/new_york_city.jpg"
+            :src="meetup.imageUrl"
             height="370px">
           </v-card-media>
           <v-card-text>
@@ -26,7 +26,12 @@
 
 <script>
 export default {
-
+  props: ['id'],
+  computed: {
+    meetup () {
+      return this.$store.getters.loadedMeetup(this.id)
+    }
+  }
 }
 </script>
 
