@@ -4,7 +4,7 @@
       <v-flex xs12>
         <v-card>
           <v-card-title>
-            <h2 class="primary--text">{{ meetup.title}}</h2>
+            <h2 class="primary--text">{{ meetup.title }}</h2>
           </v-card-title>
           <v-card-media
             :src="meetup.imageUrl"
