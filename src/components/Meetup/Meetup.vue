@@ -32,7 +32,9 @@
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <app-meetup-register-dialog :meetupId="meetup.id"></app-meetup-register-dialog>
+            <app-meetup-register-dialog
+              :meetupId="meetup.id"
+              v-if="usserIsAuthenticate"></app-meetup-register-dialog>
           </v-card-actions>
         </v-card>
       </v-flex>
